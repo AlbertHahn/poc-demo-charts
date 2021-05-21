@@ -12,9 +12,6 @@ all: build
 test:
 	@go test -v .
 
-binary:
-	@go build -ldflags '-w -linkmode external -extldflags -static' -o poc-demo .
-
 build:
 	@docker build -t ${REPO}:${TAG} .
 
