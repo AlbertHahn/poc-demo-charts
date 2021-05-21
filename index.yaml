@@ -3,6 +3,16 @@ entries:
   node-red:
   - apiVersion: v2
     appVersion: main
+    created: "2021-05-21T12:20:58.329563497Z"
+    description: A Helm chart for Kubernetes
+    digest: e76a6f2332805ec7f385f7aa4663e2fea6c339d91922ca7fe59a2ac1e27dff62
+    name: node-red
+    type: application
+    urls:
+    - https://github.com/AlbertHahn/poc-demo-charts/releases/download/node-red-0.4.0/node-red-0.4.0.tgz
+    version: 0.4.0
+  - apiVersion: v2
+    appVersion: main
     created: "2021-05-21T11:51:03.821185352Z"
     description: A Helm chart for Kubernetes
     digest: 9bb7310e4ec611fe8718bbb14553eb9cdb2bb9f4f906ff8e9317ad9709a9a589
