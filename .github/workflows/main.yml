@@ -90,7 +90,7 @@ jobs:
           export PATH=${PATH}:`go env GOPATH`/bin
           go get github.com/davidrjonas/semver-cli
           git clone https://github.com/AlbertHahn/poc-demo-charts.git
-          cd demo-charts
+          cd poc-demo-charts
           sed -i "s/appVersion:.*/appVersion: ${{ env.RELEASE_VERSION }}/g" charts/node-red/Chart.yaml
           current_chart_version=$(cat charts/node-red/Chart.yaml | grep "^version: .*" | grep -o "[0-9.]\+")
           next_chart_version=$(semver-cli inc minor $current_chart_version)
