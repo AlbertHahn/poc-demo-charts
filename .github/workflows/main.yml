@@ -50,16 +50,16 @@ jobs:
           tags: albird/node-red:${{ env.RELEASE_VERSION }}
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache
-      - name: Run Trivy vulnerability scanner
-        uses: aquasecurity/trivy-action@master
-        with:
-          image-ref: albird/node-red:${{ env.RELEASE_VERSION }}
-          exit-code: '1'
-          ignore-unfixed: true
-          vuln-type: 'os,library'
-          severity: 'CRITICAL,HIGH'
-      - name: Image digest
-        run: echo ${{ steps.docker_build.outputs.digest }}
+#      - name: Run Trivy vulnerability scanner
+#        uses: aquasecurity/trivy-action@master
+#        with:
+#          image-ref: albird/node-red:${{ env.RELEASE_VERSION }}
+#          exit-code: '1'
+#          ignore-unfixed: true
+#          vuln-type: 'os,library'
+#          severity: 'CRITICAL,HIGH'
+#      - name: Image digest
+#        run: echo ${{ steps.docker_build.outputs.digest }}
 
   deploy-chart:
     runs-on: ubuntu-latest
