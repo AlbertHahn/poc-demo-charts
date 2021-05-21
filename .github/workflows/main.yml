@@ -98,8 +98,8 @@ jobs:
           echo "Current chart version: $current_chart_version"
           echo "Next chart version: $next_chart_version"
           sed -i "s/version:.*/version: $next_chart_version/g" charts/node-red/Chart.yaml
-          git config user.name AlbertHahn
-          git config user.email AlbertHahn@github.com
+          git config user.name github-actions
+          git config user.email github-actions@github.com
           git add .
           git commit -m "bump node-red to ${{ env.RELEASE_VERSION }}"
           git push origin main
