@@ -47,7 +47,7 @@ jobs:
           builder: ${{ steps.buildx.outputs.name }}
 #          platforms: linux/amd64,linux/arm64,linux/arm/v7
           push: true
-          tags: albird/node-red:${{ env.RELEASE_VERSION }}
+          tags: albird/poc-demo:${{ env.RELEASE_VERSION }}
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache
 #      - name: Run Trivy vulnerability scanner
