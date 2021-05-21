@@ -2,7 +2,7 @@ CGO_ENABLED=0
 GOOS=linux
 GOARCH=amd64
 TAG=1.0.0
-REPO=alberthahn/poc-demo
+REPO=albird/poc-demo
 GO111MODULE=on
 
 GIT_TREE_STATE=$(shell (git status --porcelain | grep -q .) && echo dirty || echo clean)
@@ -13,7 +13,7 @@ test:
 	@go test -v .
 
 binary:
-	@go build -ldflags '-w -linkmode external -extldflags -static' -o rancher-demo .
+	@go build -ldflags '-w -linkmode external -extldflags -static' -o poc-demo .
 
 build:
 	@docker build -t ${REPO}:${TAG} .
